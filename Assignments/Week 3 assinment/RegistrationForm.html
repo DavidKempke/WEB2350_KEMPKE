@@ -1,0 +1,107 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <!--Honor Code: I acknowledge that this code represents my own work: DK Date: 03/07/2018 --> 
+  <meta charset="utf-8" /> 
+  <meta name="description" content="DESCRIPTION OF ASSIGNMENT GOES HERE" /> 
+  <meta name="keywords" content="COMMA SEPARATED SEARCH KEYWORDS FOR ASSIGNMENT GOES HERE" /> 
+  <meta name="author" content="Dvaid Kempke" /> 
+
+  <title>registration</title> 
+
+</head> 
+<body> 
+  	<div id="forms">
+				<form>
+				<fieldset>
+					<legend>Personal Details</legend>
+					<p>
+						<label>First Name</label>
+						<input placeholder="First name only" type="text" autofocus required>
+					</p>
+					<p>
+						<label>Last Name</label>
+						<input placeholder="Fast name only" type="text" autofocus required>
+					</p>
+                    
+                    <p>
+						<label>Date of Birth</label>
+						<input type="date"  required>
+					</p>
+                    
+                    <p>
+						<label>Email</label>
+						<input placeholder="Myemail@domail.com" type="email"  required>
+					</p>
+                    <p>
+						<label>URL</label>
+						<input placeholder="Website.com" type="url"  required>
+					</p>
+                    <p>
+						<label>Phone</label>
+						<input placeholder="XXX-XXX-XXXX" type="tel"  required>
+					</p>
+                    <p>
+						<label>Shoesize</label>
+						<input type="number"  min="5" max="18" step=".5" value="9" required>
+					</p>
+					
+			</fieldset>
+                    
+            <fieldset>
+                <legend>Billing Adress</legend>
+                
+					<p>
+                        <label>Address</label>
+						<textarea rows="5" cols="40"></textarea>
+					</p>
+					<p>
+                         <label>Country</label>
+						<select>
+							<option>USA</option>
+							<option>Mexico</option>
+							<option>Canada</option>
+						</select>
+					</p>
+					
+            </fieldset>
+            <fieldset>
+                <legend>Card details</legend>
+                
+                <fieldset>
+                <legend>Card type</legend>
+					<p>
+						<label>Visa</label>
+						<input type="radio" name="radio-choice">
+						<label>Mastercard</label>
+						<input type="radio" name="radio-choice">
+                        <label>AMEX</label>
+						<input type="radio" name="radio-choice">
+					</p>
+                </fieldset>
+                <p>
+						<label>Full Name</label>
+						<input placeholder="As it appears on card" type="text"  required>
+					</p>
+					<p>
+						<label>Card number</label>
+						<input  type="text"  required>
+					</p>
+                    <p>
+						<label>Security code</label>
+						<input  type="password" autofocus required>
+					</p>
+                    <p>
+						<label>Expiry Date</label>
+						<input type="date"  required>
+                
+                    
+            </fieldset>
+                    <p>
+						<input type="submit" value="Submit Form">
+						<input type="reset" value="Clear Form">
+					</p>
+		</form>
+	</div>
+</body>
+</html>
