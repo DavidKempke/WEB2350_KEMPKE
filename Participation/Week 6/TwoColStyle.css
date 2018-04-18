@@ -1,0 +1,66 @@
+.navList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.navEl {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #555;
+}
+.active {
+    background-color: #4CAF50;
+}
+body {
+    background-color: lightcyan;
+}
+
+
+p{
+    color: black;
+    
+}
+.left1 {
+    float: left;
+    width: 20%;
+    background-color: #ddd;
+   padding: 12px ;
+}
+.right1 {
+    float: left;
+    width: 80%;
+    background-color: #eee;
+    padding: 12px ;
+}
+.row1{
+    display: flex;
+}
+.left2 {
+    float: left;
+    width: 20%;
+    background-color: #eee;
+   padding: 12px ;
+}
+.right2 {
+    float: left;
+    width: 80%;
+    background-color: #fff;
+    padding: 12px ;
+}
+.row2{
+    display: flex;
+}

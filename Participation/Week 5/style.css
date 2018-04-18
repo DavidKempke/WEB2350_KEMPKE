@@ -1,0 +1,72 @@
+/* p {
+	background-color: purple;
+	color: blue;
+}*/
+
+body {
+	background-color: #cccc00;
+	font-size: small;
+	font-family: helvetica;
+}
+
+
+h1, h2, h3 {
+	text-transform: lowercase;
+}
+
+h5 span {
+	color: gray;
+
+}
+
+
+h3 {
+	border-bottom-style:double;
+	border-bottom-width: 10px;
+	border-bottom-color: yellow;
+	width: 500px;
+	text-align: right;
+	padding: 15px;
+	margin: auto;
+}
+
+h4 {
+	border-top-style: dashed;
+	border-right-style: solid;
+	border-bottom-style: double;
+	border-left-style: solid;
+	background-color: #ff8080;
+	height: 1000px;
+	background-image: url(mountain.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-repeat: repeat-y;
+	background-position: 50px 100px;	
+}
+
+a {
+	color: purple;
+	text-decoration: none;
+	background-color: aqua;
+	font-size: 24px;
+}
+
+a:hover {
+	color: #fff;
+	text-decoration: none;
+	background-color:cyan;
+	font-size: 100px;
+}
+
+#bgFirst {
+	text-shadow: 10px 10px #ff0000;
+}
+
+.firstClass {
+	background-color: pink
+}
+
+
+
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Images, Tables, and Forms</title>
+</head>
+<body>
+	<a href="#forms">Forms</a>
+    <h1>Images</h1>
+		<p>
+			<img src="https://assets.pokemon.com/assets//cms2/img/play-games/_tiles/alolan_volcanic_panic/alolan-volcanic-panic-169.jpg" height="250px" width="450px">
+		</p>
+		<p>
+			<img src="pokemon.png" height="50%" width="50%">
+		</p>
+    <hr/>
+		<h1>Tables</h1>
+		<table border="1">
+			<caption>Transistors then and now</caption>
+			<tr>
+				<th>Attribute</th>	
+				<th>1975</th>	
+				<th>2018</th>	
+			</tr>
+			<tr>
+				<th>Transistor Size</th>
+				<td>6 &mu;m</td>
+				<td>14 nm</td>
+			</tr>
+			<tr>
+				<th>Transistor Count</th>
+				<td>6K</td>
+				<td>1.3G</td>
+			</tr>
+		</table>
+		<br><br>
+		<!-- comment goes here -->
+		<table border="1">
+			<caption>Team Schedule</caption>
+				<tr>
+					<th></th>
+					<th>Monday</th>
+					<th>Wednesday</th>
+					<th>Friday</th>
+				</tr>
+				<tr>
+					<th>9:00</th>
+					<td colspan="3">Warmup</td>
+				</tr>
+				<tr>
+					<th>10:00</th>
+					<td>Drills</td>
+					<td>Skills Test</td>
+					<td rowspan="2">Scrimage</td>
+				</tr>
+				<tr>
+					<th>11:00</th>
+					<td>Film</td>
+					<td>Weights</td>
+				</tr>
+		</table>
+		<br><br>
+		<table border="1">
+			<caption>First Gen Pokemon Chart</caption>
+			<thead>
+				<th>Image</th>
+				<th>Name</th>
+				<th>Type</th>
+				<th>Evolves Into</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+							<img src="https://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/600px-001Bulbasaur.png" height="50%">
+					</td>
+					<td>Bulbasaur</td>
+					<td>Grass/Poisen</td>
+					<td>
+							<a href="https://bulbapedia.bulbagarden.net/wiki/Ivysaur_(Pok%C3%A9mon)">Ivysaur</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+							<img src="https://cdn.bulbagarden.net/upload/thumb/7/73/004Charmander.png/250px-004Charmander.png">
+					</td>
+					<td>Charmander</td>
+					<td>Fire</td>
+					<td>
+							<a href="https://bulbapedia.bulbagarden.net/wiki/Charmeleon_(Pok%C3%A9mon)">Charmeleon</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+							<img src="https://cdn.bulbagarden.net/upload/thumb/3/39/007Squirtle.png/250px-007Squirtle.png" alt="this is squirtle">
+					</td>
+					<td>Squirtle</td>
+					<td>Water</td>
+					<td>
+						<a href="https://bulbapedia.bulbagarden.net/wiki/Wartortle_(Pok%C3%A9mon)">Wartortle</a>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="4">Pokemon is awesome</td>	
+				</tr>	
+			</tfoot>
+		</table>
+		<hr/>
+		<h1>Forms</h1>
+	<div id="forms">
+				<form>
+				<fieldset>
+					<legend>Registration</legend>
+					<p>
+						<label>Enter Some Text</label>
+						<input type="text" required>
+					</p>
+					<p>
+						<label>Enter Password</label>
+						<input type="password" required>
+					</p>
+					<p>
+						<label>Check One</label>
+						<input type="checkbox">
+						<input type="checkbox" checked>
+						<input type="checkbox">
+					</p>
+					<p>
+						<label>Radio Buttons</label>
+						<input type="radio" name="radio-choice">
+						<input type="radio" name="radio-choice">
+					</p>
+					<p>
+						<textarea rows="10" cols="20"></textarea>
+					</p>
+					<p>
+						<select>
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option value="third option">Option 3</option>
+						</select>
+					</p>
+					<p>
+						<input type="submit" value="Submit Form">
+						<input type="reset" value="Clear Form">
+					</p>
+			</fieldset>
+		</form>
+	</div>
+
+		<p>
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+		</p>
+</body>
+</html>
