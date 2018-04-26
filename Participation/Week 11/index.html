@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Week 11</title>
+  <meta charset="utf-8">
+	<style>
+		.some-class {
+			color: blue;
+			border: 10px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo"></div>
+	<div id="demo2"></div>
+	<div id="demo3"></div>
+	<div id="highlight">Hello World!</div>
+	<a href="https://google.com">I am a link</a>
+	<img src="pokemon.png" width="50%">
+	<script>
+		var link = document.querySelector("a");
+		console.log(link);
+		
+		link.setAttribute("href", "https://weber.edu");
+		
+		var img = document.querySelector("img");
+		img.setAttribute("src","mountain.jpg")
+		
+		var tag = document.getElementById("highlight");
+		
+//		tag.style.color = "blue";
+//		tag.style.border = "10px solid red";
+//		tag.style.fontSize = "70px";
+//		tag.style.background = "yellow";
+//		tag.style.marginTop = "200px";
+		
+		tag.classList.add("some-class");
+		
+		
+		var friend1 = "Charlie";
+		var friend2 = "Liz";
+		var friend3 = "David";
+		var friend4 = "Mattias";
+		
+		var friends = ["Charlie", "Liz", "David", "Mattias"];
+		
+		console.log(friends[1]);
+		
+		friends[0] = "Chuck";
+		friends[1] = "Lizzie";
+		
+		console.log(friends[1]);
+		
+		friends[4] = 4;
+		console.log(friends[4]);
+		
+		friends[6] = 6;
+		console.log(friends[6]);
+		
+		var newArr = [];
+		var newArr2 = new Array();
+		
+		var someStuff = [49, true, "Cody", null];
+		var nums = [22, 67, 33, 96, 88];
+		console.log(nums.length);
+		
+		var friendGroups = [
+			["Harry", "Ron", "Hermione"],
+			["Malfoy", "Crabbe", "Goyle"],
+			["Mooney", "Wormtail", "Prongs"]
+		]
+		
+		console.log(friendGroups[2][0]);
+		
+		var colors = ["red", "orange", "yellow"];
+		colors.push("green");
+		
+		console.log(colors);
+		
+		colors.pop();
+		console.log(colors);
+		
+		colors.unshift("infared");
+		console.log(colors);
+		
+		colors.shift();
+		console.log(colors);
+		
+		var newFriends = ["Charlie", "Liz", "Cody", "Liz"];
+		console.log(newFriends.indexOf("Cody"));
+		console.log(newFriends.indexOf("Liz"));
+		console.log(newFriends.indexOf("Hagrid"));
+		
+		var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+		var citrus = fruits.slice(1,3);
+		console.log(citrus);
+		
+		
+		
+		var car = {
+			type: "Fiat",
+			model: "500",
+			color: "White"
+		}
+		
+		document.getElementById("demo3").innerHTML = car.type + " " + car.model + " " + car.color;
+		
+		var day;
+		
+		switch(new Date().getDay()) {
+			case 0:
+				day = "Sunday";
+				break;
+			case 1: 
+				day = "Monday";
+				break;
+			case 2:
+				day = "Tuesday";
+				break;
+			case 3:
+				day = "Wednesday";
+				break;
+			case 4: 
+				day = "Thursday";
+				break;
+			case 5:
+				day = "Friday";
+				break;
+			case 6:
+				day = "Saturday";
+		}
+		
+		document.getElementById("demo").innerHTML = "Today is " + day;
+		
+
+	</script>
+</body>
+</html>

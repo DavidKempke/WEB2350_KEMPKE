@@ -1,0 +1,73 @@
+img
+{
+
+    height: 100px;
+    width: 100px;
+}
+
+p
+{
+    padding: inherit;
+}
+
+span{
+    margin: 5px;
+    padding: 5px;
+   
+    display:inherit;
+}
+
+h1
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.rule {
+    margin: 10px;
+    background: #eee;
+}
+body{
+    background: #eee;
+}
+.left {
+    float: left;
+    width: 25%;
+    background-color: #fff;
+   padding: 12px ;
+}
+.middle1 {
+    float: left;
+    width: 50%;
+    background-color: #ddd;
+   padding: 12px ;
+}
+.right {
+    float: left;
+    width: 25%;
+    background-color: #eee;
+    padding: 12px ;
+}.row{
+    display: flex;
+}
+.left2 {
+    float: left;
+    width: 33%;
+    background-color: #eee;
+   padding: 12px ;
+}
+.middle2 {
+    float: left;
+    width: 33%;
+    background-color: #fff;
+   padding: 12px ;
+}
+.right2 {
+    float: left;
+    width: 34%;
+    background-color: #ddd;
+    padding: 12px ;
+}
+.row2{
+    display: flex;
+}

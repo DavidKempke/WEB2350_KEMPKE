@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<form id="myCarForm">
+			Favorite Car: <input type="text" name="fname" value="Nissan">
+		</form>
+		
+		<form id="myColorForm">
+			Favorite Color: <input type="text" name="favcolor" value="Blue">
+		</form>
+		
+		<button onClick="myFormFunc()">Submit</button>
+		<hr>
+		<form>
+			First Name: <input type="text" name="firstName" value="Cody"><br>
+			
+			Last Name: <input type="text" name="lastName" value="Squadroni"><br>
+			
+			City: <input type="text" name="city" value="Ogden">
+			
+		</form>
+		<button onClick="myFormLoop()">Submit</button>
+		<p id="formLoopDemo"></p>
+		
+		<script>
+			function myFormFunc() {
+//			[index]
+				var x = document.forms[0].id;
+				console.log(x);
+				
+//			item(index)
+				var y = document.forms.item(1).id;
+				console.log(y);
+				
+//			namedItem(id)
+				var z = document.forms.namedItem("myCarForm").innerHTML;
+				console.log(z);
+				
+// 			Get the value of what is inside the input field
+				var a = document.forms[0].fname.value;
+				console.log(a);
+				
+				var b = document.forms[1].favcolor.value;
+				console.log(b);
+				
+				
+			}
+			
+			function myFormLoop() {
+				var x = document.forms[2];
+				var txt = "";
+				var i;
+				
+				for(i = 0; i < x.length; i++) {
+					txt = txt + x.elements[i].value + "<br>";
+				}
+				document.getElementById("formLoopDemo").innerHTML = txt;
+			}
+
+		
+		</script>
+	</body>
+</html>

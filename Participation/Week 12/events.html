@@ -1,0 +1,109 @@
+<!DOCTYPE htm>
+<html>
+	<head>
+		<style>
+			#removeDiv {
+				background-color: coral;
+				border: 1px solid;
+				padding: 50px;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<button>Click Me</button>
+		<p id="clickDemo">No One Has Clicked Me Yet!</p>
+		<hr>
+		<p id="mouseDemo">I dare you to mouse over me!</p>
+		<hr>
+		<p>Try resizing this browser window</p>
+		<p id="windowDemo"></p>
+		
+		
+		<hr>
+		<div id="removeDiv">
+			This div element has an onmouseover event handler that displays a random number every time you move your mouse inside the coral field.
+			<p>Click the button to remove the Div's Event Handler</p>
+			<button onClick="removeHandler()" id="myBtn">Try It!</button>
+		</div>
+		<p id="removeDemo"></p>
+		
+		
+		<script>
+			document.getElementById("removeDiv").addEventListener("mousemove", myRemoveFunction);
+			
+			function myRemoveFunction() {
+				document.getElementById("removeDemo").innerHTML = Math.random();
+			}
+			
+			function removeHandler() {
+				document.getElementById("removeDiv").removeEventListener("mousemove", myRemoveFunction);
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			var button = document.querySelector("button");
+			
+			var paragraph = document.getElementById("clickDemo");
+			
+//			button.addEventListener("click", function() {
+//				paragraph.textContent = "Someone Clicked the Button!"
+//			})
+			
+			// Named Function
+			button.addEventListener("click", changeText);
+			
+			function changeText() {
+				paragraph.textContent = "Someone Clicked the Button!"
+			}
+		
+			
+			//Mouseover Event
+			var paragraph2 = document.getElementById("mouseDemo");
+			
+			paragraph2.addEventListener("mouseover", function(){
+				paragraph2.textContent = "Stop hovering over me!";
+			})
+			
+			paragraph2.addEventListener("mouseout", function() {
+				paragraph2.textContent = "Phew, thank you for leaving me alone."
+			})
+			
+			// Window Event
+			window.addEventListener("resize", function(){
+				document.getElementById("windowDemo").innerHTML = Math.random();
+			})
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		</script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script>
+function enterbets() {
+ var x = prompt("Enter your bet.", "0");
+ var i;
+for (i=0; i<x; i++){
+		
+	document.write( "<tr><td>ROW #" + i  + "</td></tr>");
+	}
+
+if(x >= 0  ) {
+     alert("Good job");
+     bet = newBet;
+     minBet = 0;
+   }else {
+  alert("Min bet was not placed");
+  enterbets();
+  }
+}
+    </script>
+</head>
+<body>
+    <table>
+<script>
+  enterbets();
+    </script>
+        </table>
+</body>
+</html>

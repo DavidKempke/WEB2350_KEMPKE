@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>JQuery Effects</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<style type="text/css">
+  
+#DDList ul li, ul li {list-style:none}
+#DDList, ul {padding:0px;margin:0px} 
+
+#DDList li.title {width:220px;float:left;border:solid 1px black;background-color:crimson;text-align:center }
+#DDList li.title a {padding:15px}
+
+#DDList li.title ul {display:none;border-top:1px solid black;text-align:left}
+#DDList a {color:white}
+
+.newStyle {color:#FFFFFF;background-color:#000080}
+</style>
+<script>
+	function countpar() {
+		window.alert("There are " + $("p").length + " paragraphs on this page.");
+		$("p:even").css("background-color", "yellow");
+	}
+	
+	$(function() {
+		$(".image").click(function(event){
+			$(".image").hide(3000);
+		})
+		
+		$("#button").click(function(event) {
+			$(".image").show('slow');
+		})
+		
+		$("#divbutton").click(function(event) {
+			$(".image").toggle(4000);
+		})
+		
+		$("#slideup").click(function(event){
+			$("#second").slideToggle('slow')
+		})
+		
+		$("#ShowPhoto2").click(function(event){
+			$("#photo2").fadeIn(5000);
+		})
+		
+		$("#HidePhoto2").click(function(event){
+			$("#photo2").fadeOut('fast');
+		})
+		
+		$("#photo2").click(function(event){
+			$("#photo2").fadeTo(1000, 0.5);
+		})
+		
+		$("#DDList li.title").hover(
+			function() {
+				$("ul", this).css("display", "block");
+			},
+			function() {
+				$("ul", this).css("display", "none");
+			}
+		)
+		
+		$("#car").click(function(event) {
+			$("#car").animate({left: "500px"}, 5000, function() {
+				$("#car").animate({left: "0px"}, 5000)
+			})
+		})
+		
+	})
+	
+</script>
+
+
+
+</head>
+<body>
+
+<p id="first">This is paragraph 1</p>
+<p id="second">This is paragraph 2</p>
+<p>This is paragraph 3</p>
+
+
+<form>
+<input type="button" value="Number of Paragraphs" onclick="countpar()"/>
+</form>
+
+
+<div><img class="image" src="photo1.jpg" alt="Sample Photo" /></div>
+
+<input type="button" value="Show Image" id="button"/>
+
+<div id="divbutton">Click Me To Toggle Image</div>
+<form>
+<input type="button" id="slideup" value="Slide Text Up"/>
+</form>
+<div>
+
+<img src="photo2.jpg" id="photo2" style="width:25%;display:none"/>
+
+<form>
+
+<input type="button" id="ShowPhoto2" value="Fade In"/>
+<input type="button" id="HidePhoto2" value="Fade Out"/>
+</form>
+
+</div>
+<ul id="DDList">
+<li class="title">
+	<a href="">Search Engines</a>
+	 <ul>
+	  <li><a href="http://www.google.com/">Google</a></li>
+	  <li><a href="http://www.yahoo.com/">Yahoo</a></li>
+	  <li><a href="http://www.bing.com/">Bing</a></li>
+	 </ul>
+	 </li>
+	  <li class="title">
+	  <a href="">Web Browsers</a>
+         <ul>
+	  <li><a href="http://www.microsoft.com/ie/">Internet Explorer</a></li>
+	  <li><a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a></li>
+	  <li><a href="http://www.google.com/Chrome/">Chrome</a></li>
+	 </ul>
+ </li>
+</ul>
+<p>
+<img src="car.jpg" style="position:relative" id="car"/>
+</p>
+
+</body>
+</html>

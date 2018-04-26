@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaScript Example</title>
+  <meta charset="utf-8">
+<script type="text/javascript" src="script.js"></script>
+	
+</head>
+<body>
+	<h1>Calculate Your Grade</h1>
+	<div id="grade"></div>
+	<hr>
+	<div id="hello">
+		<input type="button" value="Say Hello" onclick="helloWorld()"/>
+	</div>
+	<hr>
+	<div id="timer"></div>
+	<input type="button" value="Stop" onclick="myStopFunction()"/>
+	<hr>
+	<script>
+
+		var total = parseInt(prompt("Exam Grade?"));
+		var x = document.getElementById("grade")
+		
+		if(total >= 90){
+			x.innerHTML = "<p>You get an A!</p>";
+		} else {
+			x.innerHTML = "<p>Ouch!</p>";
+		}
+		
+		
+		
+		for(var s = 0; s < 100; s++){
+			console.log(s);
+		}
+		
+		var a = 0;
+		
+		while(a < 10){
+			document.write(a + "<br>");
+			a += 2;
+		}
+		
+
+		
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <title>RockPaperScissors</title>
+    <link rel="stylesheet" href="sytle.css" />
+    <script src="gameOne.js"></script>
+    <meta charset="utf-8">
+</head>
+<body>
+<br>
+
+
+<h1> Rock, Paper, or Scissors: <button onclick="playGame()">New Game</button></h1>
+<h1> Start Game: <button onclick="startIt()">Go</button></h1>
+<div class="row2">
+    <div class= "left2">
+<span id="safeTimerDisplay">Timer: 01:00</span>
+        </div>
+    <div class= "middle2">
+<span id="credits">Your Score: 0</span>
+    </div>
+    <div class= "right2">
+<span id="highScore">High Score: 0</span>
+    </div>
+</div>
+<div class = "row">
+<div class="left">
+<span id="Sit">You need to: </span>
+<span>computers choice</span>
+<img id="computerImage" src="Image/paper.jpg" />  
+    </div>
+<div class= "middle1">
+    <span>Please choose:</span>
+    <button onclick="rock()"><img src="Image/Rock.png" /></button>
+    <button onclick="paper()"><img src="Image/paper.jpg" /></button>
+    <button onclick="scissors()"><img src="Image/scissors.png" /></button>
+    </div>
+<div class="right">
+    <span>Your choice: </span></p>
+<img id="playerImage" src="Image/paper.jpg" />
+<span> Submit Choice: <button onclick="submit()">Sumbit</button></span>
+    </div>
+</div>
+<h1 id="result">New Game </h1>
+
+
+
+<div class="rule">
+<p>Rules: Has you wagering highly valuable credits deciding if you can defeat the computer over nine rounds. However, you have some inside information! You know that the computer will choose each throw (rock, paper, and scissors) exactly three times each, you just don’t know exactly when. Bet your credits based on your faith in knowing the computer’s next throw. The catch is, if you tie against the computer on a throw, you must at least DOUBLE your next bet! Bet carefully and amass the largest bank possible. There are ten rounds possible. Min bet it alway 5.
+    </p>    
+</div>
+
+</body>
+
+</html>

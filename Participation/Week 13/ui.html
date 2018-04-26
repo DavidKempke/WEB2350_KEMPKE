@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>JQuery Widgit Demo</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<style>
+         #accordion{font-size: 14px;}
+
+         #draggable { 
+           width: 100px; height: 50px; padding: 0.5em; 
+           margin: 0px 5px 10px 0; 	    
+         }
+          #droppable { 
+           width: 120px; height: 90px;padding: 0.5em; float: left; 
+           margin: 10px; 
+         }
+         
+	  #tabs{font-size: 14px;}
+
+	         
+	.ui-widget-header {
+            background:#b9cd6d;
+            border: 1px solid #b9cd6d;
+            color: #FFFFFF;
+            font-weight: bold;
+         }
+
+          .active {
+            border-color : blue;
+            background : grey;
+            }  
+
+         .hover {
+            border-color : red;
+            background : green;
+	    }
+
+         .resultarea {
+            background: #cedc98;
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+            color: #333333;
+            font-size:14px;
+         }
+
+    #feedback { font-size: 1.4em; }
+    #selectable .ui-selecting { background: #FECA40; }
+    #selectable .ui-selected { background: #F39814; color: white; }
+    #selectable { list-style-type: none; margin: 0; padding: 0; }
+    #selectable li { margin: 3px; padding: 1px; float: left; width: 100px; height: 80px; font-size: 4em; text-align: center; }
+      </style>
+     
+<script>
+$(function() {
+	$("#accordion").accordion();
+	$("#tabs").tabs();
+	$("#datepicker").datepicker();
+	$("#draggable").draggable();
+	$("#droppable").droppable({
+		activeClass: "active",
+		hoverClass: "hover",
+		drop: function(event, ui) {
+			$(this).find("p").html("Dropped!")
+		}
+	})
+	
+	$("#selectable").selectable({
+		selected: function(){
+			var result = $("#result").empty();
+			
+			$(".ui-selected", this).each(function() {
+				var index = $("#selectable li").index(this);
+				result.append(" #" + (index + 1));
+			})
+		}
+	})
+	
+})
+
+</script>
+
+</head>
+<body>
+   
+
+
+<div id="accordion">
+   <h3><a href="#">First header</a></h3>
+  
+  <div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+	sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	<a href="http://www.tutorialspoint.com/jqueryui/jqueryui_accordion.htm" target = "_blank">Find out more about the accordion</a> 
+   </div>
+	
+   <h3><a href="#">Second header</a></h3>
+   <div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+	sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+   </div>
+   
+   <h3><a href="#">Third header</a></h3>
+   <div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+	sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+   </div>
+   
+   <h3><a href="#">Fourth header</a></h3>
+   <div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+	sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+   </div>
+   
+</div>
+   <div id="tabs">
+         <ul>
+            <li><a href="#tabs-1">Tab 1</a></li>
+            <li><a href="#tabs-2">Tab 2</a></li>
+            <li><a href="#tabs-3">Tab 3</a></li>
+         </ul>
+         <div id="tabs-1">
+            <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit 
+            amet, consectetur, adipisci velit... </p>
+		<a href="http://www.tutorialspoint.com/jqueryui/jqueryui_tabs.htm" target = "_blank">Find out more about tabs</a> 
+         </div>
+         <div id="tabs-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+            nisi ut aliquip ex ea commodo consequat. </p>
+         </div>
+         <div id="tabs-3">
+            <p>ed ut perspiciatis unde omnis iste natus error sit 
+            voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+            eaque ipsa quae ab illo inventore veritatis et quasi architecto 
+            beatae vitae dicta sunt explicabo.  </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+            nisi ut aliquip ex ea commodo consequat. </p>
+         </div>
+      </div>
+<div id="draggable" class="ui-widget-content">
+      <p>Drag me to my target</p>
+   </div>
+   <div id="droppable" class="ui-widget-header">
+      <p>Drop here</p>
+
+   </div>
+  <a href="http://www.tutorialspoint.com/jqueryui/jqueryui_draggable.htm" target = "_blank">Find out more about J-Query Interactions</a>  
+
+<div>
+<p>Enter Date: <input type="text" id="datepicker"></p>
+<a href="http://www.tutorialspoint.com/jqueryui/jqueryui_datepicker.htm" target = "_blank">Find out more about the DatePicker and other Widgets</a> 
+</div>
+
+
+<div><h3>Events</h3>
+  <ol id="selectable">
+    <li class="ui-state-default">1</li>
+    <li class="ui-state-default">2</li>
+    <li class="ui-state-default">3</li>
+    <li class="ui-state-default">4</li>
+    <li class="ui-state-default">5</li>
+    <li class="ui-state-default">6</li>
+    <li class="ui-state-default">7</li>
+    <li class="ui-state-default">8</li>
+    <li class="ui-state-default">9</li>
+    <li class="ui-state-default">10</li>
+    <li class="ui-state-default">11</li>
+    <li class="ui-state-default">12</li>
+</ol>
+<p>
+      <span class="resultarea">Selected Product</span>
+      <span id="result" class="resultarea"></span>
+</p>
+</div>
+</body>
+</html>
